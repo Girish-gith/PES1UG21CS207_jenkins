@@ -10,7 +10,6 @@ pipeline {
         }
         stage('Build') {
             steps {
-                build 'PES1UG21CS207-1'
                 sh 'g++ main.cpp -o output'
             }
         }
@@ -21,7 +20,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'deploy'
+                // Add deployment steps here
+                echo 'Deploying...'
+                // Example: scp output user@server:/path/to/deploy
             }
         }
     }
